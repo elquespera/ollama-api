@@ -7,7 +7,7 @@ const ollamaURL = "http://localhost:11434/api";
 const hmacSecret = process.env.API_HMAC_SECRET;
 
 const app = express();
-app.use(express.json());
+app.use(express.json({ limit: "50mb" }));
 
 const port = process.env.PORT || 3000;
 
